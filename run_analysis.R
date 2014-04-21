@@ -1,24 +1,21 @@
 ## Merge the training and the test.
 
-# Read the data, explicitly set the sep and header even it is the default values
-# to protect the code from a "possible" future change in read.table's default values
-
 # Read features' name 
 
-features <- read.table("features.txt",col.names=c("id","feature"), sep = "", header=FALSE)
-nfeature = nrow(features)
+features <- read.table("features.txt",col.names=c("id","feature"))
+nfeature <- nrow(features)
 feature.names <- as.character(features[,"feature"])
 
 # Read, merge the data and set the proper col.names
-data.x <- read.table("train/X_train.txt", colClasses=rep("numeric",nfeature), sep = "", header=FALSE)
-data.x <- rbind(data.x, read.table("test/X_test.txt",colClasses=rep("numeric",nfeature), sep = "", header=FALSE))
+data.x <- read.table("train/X_train.txt", colClasses=rep("numeric",nfeature))
+data.x <- rbind(data.x, read.table("test/X_test.txt",colClasses=rep("numeric",nfeature)))
 names(data.x) <- feature.names
 
-data.y <- read.table("train/y_train.txt",col.names=c("activity"),colClasses=c("factor"), sep = "", header=FALSE)
-data.y <- rbind(data.y, read.table("test/y_test.txt",col.names=c("activity"), colClasses=c("factor"), sep = "", header=FALSE))
+data.y <- read.table("train/y_train.txt",col.names=c("activity"),colClasses=c("factor"))
+data.y <- rbind(data.y, read.table("test/y_test.txt",col.names=c("activity"), colClasses=c("factor")))
 
-data.subject <- read.table("train/subject_train.txt",col.names=c("subject"),colClasses=c("numeric"), sep = "", header=FALSE)
-data.subject <- rbind(data.subject, read.table("test/subject_test.txt",col.names=c("subject"), colClasses=c("numeric"), sep = "", header=FALSE))
+data.subject <- read.table("train/subject_train.txt",col.names=c("subject"),colClasses=c("numeric"))
+data.subject <- rbind(data.subject, read.table("test/subject_test.txt",col.names=c("subject"), colClasses=c("numeric")))
 
 data <- cbind(data.subject, data.y, data.x)
 
@@ -33,7 +30,7 @@ data <- data[,grepl("^subject$|^activity$|mean\\(\\)|std\\(\\)",names(data))]
 
 ## Use descriptive activity names
 
-tmp <- read.table("activity_labels.txt",colClasses=c("factor","character"),col.names=c("id","activity"), sep = "", header=FALSE)
+tmp <- read.table("activity_labels.txt",colClasses=c("factor","character"),col.names=c("id","activity"))
 # Create a named vector with the activity name as values and activity code as name
 activities <- as.character(tmp$activity)
 names(activities) <-  tmp$id
