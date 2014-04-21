@@ -1,6 +1,6 @@
 ## Description
 
-This is a Project for "Getting and Cleaning Data" course on Coursera. The objective is to get and clean publicly available activity recognition data set from UCI machine learning repository
+This is a Project for "Getting and Cleaning Data" course on Coursera. The objective is to get and clean publicly available activity recognition data set from UCI machine learning repository [1]
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
@@ -30,3 +30,8 @@ After executing the script in R, the tidy data set, as per the project requireme
 3. Filter columns to include only those that has mean() or std() in the column name
 4. Using the *activity_labels.txt* map the activity code (e.g. 1,2 and 3) to activity name (e.g. WALKING, WALKING_UPSTAIRS and WALKING_DOWNSTAIRS)
 5. Prepare the tidy data set by cleaning the column names then use *aggregate* to group the data by the subject and activity then calculate the mean
+
+
+
+----
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
