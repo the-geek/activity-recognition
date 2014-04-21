@@ -36,3 +36,5 @@ For example, in the below table *tBodyAcc.mean.X* represents the mean accelerome
 | subject | activity | tBodyAcc.mean.X | tBodyAcc.std.X |
 | ----    | ----     |  ----           |    -----       |
 | 1	| WALKING	| 0.2773308	|	-0.283740259 |
+
+All other variables in the output data set follow the same pattern
