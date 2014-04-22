@@ -31,6 +31,7 @@ After executing the script in R, the tidy data set, as per the project requireme
 4. Using the *activity_labels.txt* map the activity code (e.g. 1,2 and 3) to activity name (e.g. WALKING, WALKING_UPSTAIRS and WALKING_DOWNSTAIRS)
 5. Prepare the tidy data set by cleaning the column names then use *aggregate* to group the data by the subject and activity then calculate the mean
 
+The file *activity-clean.txt* is example of the script output, also the file *CodeBook.md* provides more details on the feature description
 
 ## More Details 
 (quoted from the original expirement description)
