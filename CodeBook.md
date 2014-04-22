@@ -29,7 +29,7 @@ These signals were used to estimate variables of the feature vector for each pat
 - fBodyGyroMag
 - fBodyGyroJerkMag
 
-The set of variables in the output data set, after running the analysis script, represent the average of the measurments from the original data set grouped by the subject and activity 
+The set of variables in the output data set, after running the analysis script, represent the average of the measurments from the original data set grouped by the subject and activity. Only variables that have -mean() or -std() in their name were included. Variables' name in the output data set were cleaned to remove all special characters and only allow "." is used as separator.
 
 For example, in the below table *tBodyAcc.mean.X* represents the mean accelerometer value along the X-axis for subject 1's walking activity and *tBodyAcc.std.X* represents the mean of the standard deviation X-axis acceleration values.
 
